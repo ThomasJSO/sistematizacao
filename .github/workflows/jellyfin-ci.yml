@@ -3,11 +3,11 @@ name: Jellyfin CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
       - feature/sistematizacao
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -33,3 +33,5 @@ jobs:
 
     - name: Publish build artifacts
       run: dotnet publish --configuration Release --output ./output
+
+      
